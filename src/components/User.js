@@ -4,13 +4,13 @@ import ChatLog from './ChatLog';
 import ChatForm from './ChatForm';
 
 const User = (props) => {
-  const { id, name, users, log, updateName } = props;
+  const { id, name, users, log, updateName, addMessage } = props;
   console.log(props)
   return (
     <div className="user">
       <Profile id={id} name={name} updateName={updateName} />
       <ChatLog log={log} />
-      <ChatForm />
+      <ChatForm addMessage={addMessage} />
     </div>
   )
 }

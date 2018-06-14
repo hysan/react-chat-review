@@ -38,6 +38,16 @@ class ChatContainer extends Component {
     })
   }
 
+  addMessage = (message) => {
+    let log = [...this.state.log,
+      { id: UUID(), user_id: this.state.users[1].id, message, timestamp: Date.now() }
+    ]
+
+    this.setState({
+      log
+    })
+  }
+
   renderUsers = () => {
     return this.state.users.map(user => {
       return (
@@ -47,6 +57,7 @@ class ChatContainer extends Component {
           users={this.state.users}
           log={this.state.log}
           updateName={this.updateName}
+          addMessage={this.addMessage}
         />
       )
     })
