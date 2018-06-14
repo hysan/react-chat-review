@@ -8,7 +8,7 @@ const MessageContainer = (props) => {
   return (
     <div className="messageContainer">
       <Avatar user={message.user_id} />
-      <Message />
+      <Message text={message.message} />
     </div>
   )
 }
