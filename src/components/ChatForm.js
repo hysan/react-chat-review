@@ -14,6 +14,7 @@ class ChatForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.addMessage(this.state.message);
+    this.setState({ message: "" });
   }
 
   render() {
