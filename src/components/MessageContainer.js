@@ -3,11 +3,11 @@ import Avatar from './Avatar';
 import Message from './Message';
 
 const MessageContainer = (props) => {
-  console.log(props);
+  console.log("MessageContainer", props);
   return (
     <div className="messageContainer">
       <Avatar name={props.userName} />
-      <Message text={props.text} />
+      <Message id={props.id} text={props.text} deleteMessage={props.deleteMessage} />
     </div>
   )
 }

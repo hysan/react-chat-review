@@ -11,8 +11,16 @@ class Message extends Component {
     });
   }
 
+  deleteMe = () => {
+    this.props.deleteMessage(this.props.id);
+  }
+
+  renderDeleteButton = () => {
+    return <button onClick={this.deleteMe}>Delete</button>
+  }
+
   render() {
-    const deleteButton = this.state.hideDeleteButton || <button onClick={this.deleteMe}>Delete</button>;
+    const deleteButton = this.state.hideDeleteButton || this.renderDeleteButton();
 
     return (
       <div onClick={this.toggleDeleteButton} className="message">

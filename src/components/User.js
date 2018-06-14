@@ -8,7 +8,7 @@ const User = (props) => {
   return (
     <div className="user">
       <Profile changingName={props.changingName} userId={props.id} />
-      <ChatLog log={props.log} users={props.users} />
+      <ChatLog log={props.log} users={props.users} deleteMessage={props.deleteMessage} />
       <MessageForm addMessage={props.addMessage} userId={props.id} />
     </div>
   )

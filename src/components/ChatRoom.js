@@ -57,6 +57,10 @@ class ChatRoom extends Component {
     this.setState({ users });
   }
 
+  deleteMessage = (id) => {
+    console.log('deleteMessage')
+  }
+
   renderUser = () => {
     return this.state.users.map(user => {
       return (
@@ -67,6 +71,7 @@ class ChatRoom extends Component {
           addMessage={this.addMessage}
           users={this.state.users}
           changingName={this.changingName}
+          deleteMessage={this.deleteMessage}
         />
       )
     })

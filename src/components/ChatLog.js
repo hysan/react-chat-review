@@ -15,6 +15,7 @@ const ChatLog = (props) => {
               key={msg.id}
               {...msg}
               userName={userName}
+              deleteMessage={props.deleteMessage}
             />
           )
         })}
