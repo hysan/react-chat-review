@@ -9,6 +9,7 @@ class MessageForm extends Component {
     this.setState({
       [event.target.name]: event.target.value,
     })
+    this.props.iamtyping(this.state.message.length > 0, this.props.userId);
   }
 
   handleSubmit = (event) => {

@@ -2,6 +2,7 @@ import React from 'react';
 import MessageContainer from './MessageContainer';
 
 const ChatLog = (props) => {
+  console.log('ChatLog', props.someoneIsTyping)
   return (
     <div className="chatlog">
       {props.log
@@ -19,6 +20,13 @@ const ChatLog = (props) => {
             />
           )
         })}
+        {
+          props.someoneIsTyping
+          ?
+            <p>...</p>
+          :
+            null
+        }
     </div>
   )
 }

@@ -10,8 +10,8 @@ class ChatRoom extends Component {
 
   componentDidMount() {
     const users = [
-      { id: UUID(), name: "Shun" },
-      { id: UUID(), name: "Not Shun" },
+      { id: UUID(), name: "Shun", isTyping: false },
+      { id: UUID(), name: "Not Shun", isTyping: false },
     ];
     const log = [
       { id: UUID(), text: "hello", userId: users[0].id, timestamp: Date.now() + 1 },
@@ -42,8 +42,8 @@ class ChatRoom extends Component {
     this.setState({ log });
   }
 
-  createUser = (name, id = null) => {
-    return { id: id ? id : UUID(), name };
+  createUser = (name, id = null, isTyping = false) => {
+    return { id: id ? id : UUID(), name, isTyping };
   }
 
   // really should be modifyUser
@@ -67,6 +67,16 @@ class ChatRoom extends Component {
     this.setState({ log });
   }
 
+  iamtyping = (isTyping, userId) => {
+    const users = this.state.users.map(user => {
+      if (user.id === userId) {
+        return this.createUser(user.name, userId, isTyping);
+      }
+      return user;
+    })
+    this.setState({ users });
+  }
+
   renderUser = () => {
     return this.state.users.map(user => {
       return (
@@ -78,6 +88,7 @@ class ChatRoom extends Component {
           users={this.state.users}
           changingName={this.changingName}
           deleteMessage={this.deleteMessage}
+          iamtyping={this.iamtyping}
         />
       )
     })
