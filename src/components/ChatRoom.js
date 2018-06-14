@@ -28,7 +28,7 @@ class ChatRoom extends Component {
   }
 
   renderUser = () => {
-    return this.state.users.map(user => <User key={user.id} {...user} />)
+    return this.state.users.map(user => <User key={user.id} {...user} log={this.state.log} />)
   }
 
   render() {

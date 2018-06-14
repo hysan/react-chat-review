@@ -3,3 +3,13 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.chatroom {
+  display: flex;
+}
+
+.user {
+  display: flex;
+  flex: 1;
+  border: 1px solid black;
+}
