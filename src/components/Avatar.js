@@ -2,7 +2,7 @@ import React from 'react';
 
 const Avatar = (props) => {
   return (
-    <p>Name</p>
+    <p className="avatar">{props.user}</p>
   )
 }
 

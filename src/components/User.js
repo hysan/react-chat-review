@@ -9,7 +9,7 @@ const User = (props) => {
   return (
     <div className="user">
       <Profile id={id} name={name} updateName={updateName} />
-      <ChatLog />
+      <ChatLog log={log} />
       <ChatForm />
     </div>
   )

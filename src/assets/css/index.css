@@ -16,3 +16,12 @@ body {
   margin: 20px;
   padding: 20px;
 }
+
+.messageContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.avatar {
+  border: 1px dashed grey;
+}
