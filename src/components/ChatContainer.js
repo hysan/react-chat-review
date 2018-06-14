@@ -38,9 +38,9 @@ class ChatContainer extends Component {
     })
   }
 
-  addMessage = (message) => {
+  addMessage = (userId, message) => {
     let log = [...this.state.log,
-      { id: UUID(), user_id: this.state.users[1].id, message, timestamp: Date.now() }
+      { id: UUID(), user_id: userId, message, timestamp: Date.now() }
     ]
 
     this.setState({
