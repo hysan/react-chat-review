@@ -22,6 +22,8 @@ React Chat Review
 
 - [ ] While a user is "typing", the other user should see a "..." at the bottom of their chat log showing who is typing.
 
+## How To Steps
+
 ```sh
 // ♥ touch src/components/ChatContainer.js
 [10:56:26] (master) react-chat-review
