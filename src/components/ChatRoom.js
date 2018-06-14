@@ -27,8 +27,32 @@ class ChatRoom extends Component {
     })
   }
 
+  createMessage = (text, userId) => {
+    return {
+      id: UUID(),
+      text,
+      userId,
+      timestamp: Date.now(),
+    };
+  }
+
+  addMessage = (text, userId) => {
+    // console.log('gonna add', text, userId)
+    const log = [...this.state.log, this.createMessage(text, userId)];
+    this.setState({ log });
+  }
+
   renderUser = () => {
-    return this.state.users.map(user => <User key={user.id} {...user} log={this.state.log} />)
+    return this.state.users.map(user => {
+      return (
+        <User
+          key={user.id}
+          {...user}
+          log={this.state.log}
+          addMessage={this.addMessage}
+        />
+      )
+    })
   }
 
   render() {
