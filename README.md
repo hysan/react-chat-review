@@ -21,3 +21,21 @@ React Chat Review
 **Is Typing Display**
 
 - [ ] While a user is "typing", the other user should see a "..." at the bottom of their chat log showing who is typing.
+
+```sh
+// ♥ touch src/components/ChatContainer.js
+[10:56:26] (master) react-chat-review
+// ♥ touch src/components/ChatWindow.js
+[10:56:32] (master) react-chat-review
+// ♥ touch src/components/Profile.js
+[10:56:39] (master) react-chat-review
+// ♥ touch src/components/ChatLog.js
+[10:56:44] (master) react-chat-review
+// ♥ touch src/components/MessageContainer.js
+[10:56:50] (master) react-chat-review
+// ♥ touch src/components/Avatar.js
+[10:56:54] (master) react-chat-review
+// ♥ touch src/components/Message.js
+[10:57:00] (master) react-chat-review
+// ♥ touch src/components/ChatForm.js
+```
