@@ -9,8 +9,20 @@ class ChatContainer extends Component {
       { id: UUID(), name: "B" },
     ],
     log: [
-      // { user_id, message, timestamp }
+      // { id, user_id, message, timestamp }
     ],
+  }
+
+  componentDidMount() {
+    const { users } = this.state;
+    this.setState({
+      log: [
+        { id: UUID(), user_id: users[0].id, message: "A", timestamp: Date.now() },
+        { id: UUID(), user_id: users[1].id, message: "B", timestamp: Date.now() },
+        { id: UUID(), user_id: users[0].id, message: "C", timestamp: Date.now() },
+        { id: UUID(), user_id: users[1].id, message: "D", timestamp: Date.now() },
+      ]
+    })
   }
 
   updateName = (id, name) => {
