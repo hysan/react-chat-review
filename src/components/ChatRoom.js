@@ -57,8 +57,14 @@ class ChatRoom extends Component {
     this.setState({ users });
   }
 
+  findMessage = (id) => {
+    return this.state.log.find(msg => msg.id === id)
+  }
+
   deleteMessage = (id) => {
-    console.log('deleteMessage')
+    // const message = this.findMessage(id);
+    const log = this.state.log.filter(msg => msg.id !== id);
+    this.setState({ log });
   }
 
   renderUser = () => {
