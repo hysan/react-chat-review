@@ -1,13 +1,32 @@
 import React, { Component } from 'react';
 
 class Profile extends Component {
-  state = {}
+  state = {
+    name: ""
+  }
+
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    })
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.changingName(this.state.name); //, this.props.userId);
+  }
 
   render() {
     return (
-      <div className="profile">
-
-      </div>
+      <form className="profile" onSubmit={this.handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          value={this.state.name}
+          onChange={this.handleChange}
+        />
+        <input type="submit" value="Save" />
+      </form>
     )
   }
 }
