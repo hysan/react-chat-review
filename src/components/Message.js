@@ -5,7 +5,7 @@ class Message extends Component {
 
   render() {
     return (
-      <p>{this.props.text}</p>
+      <p className="message">{this.props.text}</p>
     )
   }
 }

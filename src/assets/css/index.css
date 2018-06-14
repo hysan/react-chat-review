@@ -14,14 +14,32 @@ body {
   flex: 1;
   border: 1px solid black;
   margin: 20px;
-  padding: 20px;
+  padding: 5px;
+}
+
+.chatlog {
+  border: 1px solid grey;
+  padding: 10px;
+  height: 300px;
+  overflow-y: auto;
 }
 
 .messageContainer {
   display: flex;
   flex-direction: row;
+  margin: 5px 0;
+  border: 1px solid blue;
+  border-radius: 10px;
 }
 
 .avatar {
   border: 1px dashed grey;
+  margin: 3px;
+  text-align: center;
+}
+
+.message {
+  flex: 1;
+  border: 1px dashed grey;
+  padding: 0 10px;
 }
