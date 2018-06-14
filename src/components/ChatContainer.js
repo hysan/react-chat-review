@@ -27,7 +27,7 @@ class ChatContainer extends Component {
 
   render() {
     return (
-      <div class="chatContainer">
+      <div className="chatContainer">
         {this.renderUsers()}
       </div>
     )
