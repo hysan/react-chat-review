@@ -4,7 +4,7 @@ import ChatLog from  './ChatLog';
 const User = (props) => {
   return (
     <div className="user">
-      <ChatLog />
+      <ChatLog log={props.log} />
 
     </div>
   )

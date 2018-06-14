@@ -4,7 +4,7 @@ import MessageContainer from './MessageContainer';
 const ChatLog = (props) => {
   return (
     <div className="chatlog">
-      <MessageContainer />
+      {props.log.map(msg => <MessageContainer key={msg.id} {...msg} />)}
     </div>
   )
 }
