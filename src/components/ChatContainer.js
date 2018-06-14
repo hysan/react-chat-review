@@ -17,10 +17,10 @@ class ChatContainer extends Component {
     const { users } = this.state;
     this.setState({
       log: [
-        { id: UUID(), user_id: users[0].id, message: "A", timestamp: Date.now() },
-        { id: UUID(), user_id: users[1].id, message: "B", timestamp: Date.now() },
-        { id: UUID(), user_id: users[0].id, message: "C", timestamp: Date.now() },
-        { id: UUID(), user_id: users[1].id, message: "D", timestamp: Date.now() },
+        { id: UUID(), user_id: users[0].id, message: "A", timestamp: Date.now() + 10 },
+        { id: UUID(), user_id: users[1].id, message: "B", timestamp: Date.now() + 20 },
+        { id: UUID(), user_id: users[0].id, message: "C", timestamp: Date.now() + 30 },
+        { id: UUID(), user_id: users[1].id, message: "D", timestamp: Date.now() + 40 },
       ]
     })
   }
