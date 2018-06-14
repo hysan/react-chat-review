@@ -30,3 +30,13 @@ body {
 .messageform {
 
 }
+
+.avatar {
+  border: 1px dashed grey;
+  margin: 5px;
+  flex: 1;
+}
+
+.message {
+  flex: 2;
+}
