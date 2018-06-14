@@ -13,19 +13,35 @@ class ChatContainer extends Component {
     ],
   }
 
+  updateName = (id, name) => {
+    let users = this.state.users.map(user => {
+      if (user.id === id) {
+        return { id, name }
+      }
+      return user;
+    });
+
+    this.setState({
+      users
+    })
+  }
+
   renderUsers = () => {
     return this.state.users.map(user => {
       return (
         <User
           key={user.id}
           {...user}
+          users={this.state.users}
           log={this.state.log}
+          updateName={this.updateName}
         />
       )
     })
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="chatContainer">
         {this.renderUsers()}
