@@ -13,7 +13,7 @@ class Profile extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    this.props.changingName(this.state.name); //, this.props.userId);
+    this.props.changingName(this.state.name, this.props.userId);
   }
 
   render() {

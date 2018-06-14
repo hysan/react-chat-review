@@ -7,7 +7,7 @@ const User = (props) => {
   // console.log("User", props)
   return (
     <div className="user">
-      <Profile />
+      <Profile changingName={props.changingName} userId={props.id} />
       <ChatLog log={props.log} users={props.users} />
       <MessageForm addMessage={props.addMessage} userId={props.id} />
     </div>

@@ -42,6 +42,21 @@ class ChatRoom extends Component {
     this.setState({ log });
   }
 
+  createUser = (name, id = null) => {
+    return { id: id ? id : UUID(), name };
+  }
+
+  // really should be modifyUser
+  changingName = (name, userId) => {
+    const users = this.state.users.map(user => {
+      if (user.id === userId) {
+        return this.createUser(name, userId);
+      }
+      return user;
+    })
+    this.setState({ users });
+  }
+
   renderUser = () => {
     return this.state.users.map(user => {
       return (
@@ -51,6 +66,7 @@ class ChatRoom extends Component {
           log={this.state.log}
           addMessage={this.addMessage}
           users={this.state.users}
+          changingName={this.changingName}
         />
       )
     })
