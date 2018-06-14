@@ -10,6 +10,23 @@ body {
 
 .user {
   display: flex;
+  flex-direction: column;
   flex: 1;
   border: 1px solid black;
+}
+
+.messageContainer {
+  display: flex;
+  border: 1px solid blue;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.chatlog {
+  height: 400px;
+  overflow-y: auto;
+}
+
+.messageform {
+
 }

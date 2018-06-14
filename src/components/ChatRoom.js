@@ -50,6 +50,7 @@ class ChatRoom extends Component {
           {...user}
           log={this.state.log}
           addMessage={this.addMessage}
+          users={this.state.users}
         />
       )
     })

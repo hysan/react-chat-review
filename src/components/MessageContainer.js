@@ -6,7 +6,7 @@ const MessageContainer = (props) => {
   console.log(props);
   return (
     <div className="messageContainer">
-      <Avatar name={props.userId} />
+      <Avatar name={props.userName} />
       <Message text={props.text} />
     </div>
   )
